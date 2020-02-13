@@ -1,0 +1,189 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Financial-balancer</title>
+  </head>
+  <body>
+    <nav class="navbar bg-primary">
+      <a class="navbar-brand text-white" href="#"
+        >Financial balancer <i class="fas fa-coins"></i
+      ></a>
+    </nav>
+    <!-- SHOWCASE START -->
+    <div class="container d-none">
+      <div class="jumbotron mt-4">
+        <h1 class="display-4">Hello, user!</h1>
+        <p class="lead">
+          This is a simple financial app, which help you to track your incomes
+          and outcomes, and last but not least it allows you to set-up your
+          financial goal.
+        </p>
+        <hr class="my-4" />
+        <p>
+          Please create your free account by providing only login and password.
+        </p>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="form-group">
+              <input placeholder="Login..." type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <input
+                placeholder="Password..."
+                type="password"
+                class="form-control"
+              />
+            </div>
+            <div class="text-center">
+              <a class="btn btn-primary px-5 " href="#" role="button">Log in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWCASE END -->
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col col-md-4 ">
+          <div class="card">
+            <div class="card-header lead text-center">Incomes</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <input type="checkbox" name="" id="" />
+                    </th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody id="incomesTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-4">
+          <div class="card">
+            <div
+              id="summary"
+              class="card-header bg-white text-center display-4 "
+            ></div>
+            <div class="card-body">
+              <form id="form">
+                <p>Add new</p>
+                <div class="d-flex justify-content-around">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="incomes"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Income</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      checked="true"
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="expenses"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Expense</label
+                    >
+                  </div>
+                </div>
+                <div>
+                  <div class="form-group mt-3">
+                    <label for="amount">Amount</label>
+                    <input
+                      placeholder="Amount..."
+                      name="amount"
+                      id="amount"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="where">Where/Source</label>
+                    <input
+                      placeholder="Where/Source..."
+                      name="where"
+                      id="where"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="when">When</label>
+                    <input
+                      type="date"
+                      name="when"
+                      id="when"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">
+                      Submit
+                    </button>
+                    <button
+                      type="button"
+                      id="checkRequest"
+                      class="btn btn-secondary btn-block"
+                    >
+                      Check request
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-4">
+          <div class="card">
+            <div class="card-header lead text-center">Expenses</div>
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <input type="checkbox" name="" id="" />
+                    </th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody id="expensesTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
